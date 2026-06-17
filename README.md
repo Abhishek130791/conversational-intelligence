@@ -8,7 +8,7 @@ A case-study page documenting a system I built that processes Zoom sales recordi
 
 ## Live page
 
-👉 **[View the project page](https://<your-username>.github.io/conversational-intelligence/)**
+👉 **[View the project page](https://abhishek130791.github.io/conversational-intelligence/)**
 
 _(Replace the URL above with your actual GitHub Pages link after publishing.)_
 
