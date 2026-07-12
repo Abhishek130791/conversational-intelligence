@@ -196,6 +196,28 @@
   .dim .bar{height:7px;background:var(--line);border-radius:99px;overflow:hidden;}
   .dim .bar i{display:block;height:100%;background:var(--green);border-radius:99px;width:0;transition:width 1s ease;}
 
+  /* proof / screenshots (dark) */
+  .proof{background:var(--ink);color:var(--paper);}
+  .proof .sec-head .eyebrow{color:var(--muted-dark);}
+  .proof .sec-head p{color:#AEB8C2;}
+  .proof .redact-note{
+    font-family:"JetBrains Mono",monospace;font-size:12px;letter-spacing:0.04em;
+    color:var(--muted-dark);margin-top:12px;
+  }
+  .shot-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-bottom:22px;}
+  .shot{
+    margin:0;border:1px solid var(--line-dark);border-radius:14px;overflow:hidden;
+    background:var(--paper-pure);display:block;text-decoration:none;
+    transition:transform .25s ease,box-shadow .25s ease;
+  }
+  .shot:hover{transform:translateY(-3px);box-shadow:0 18px 40px rgba(0,0,0,.35);}
+  .shot img{display:block;width:100%;height:auto;}
+  .shot figcaption{
+    font-family:"JetBrains Mono",monospace;font-size:12.5px;letter-spacing:0.02em;line-height:1.5;
+    color:#AEB8C2;padding:15px 18px;background:var(--ink-soft);border-top:1px solid var(--line-dark);
+  }
+  .shot figcaption b{color:var(--green);font-weight:500;}
+
   /* findings */
   .findings{background:var(--paper-pure);}
   .find-grid{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center;}
@@ -226,6 +248,7 @@
     .pipe{grid-template-columns:repeat(2,1fr);}
     .dec-grid{grid-template-columns:1fr;}
     .rep-grid{grid-template-columns:1fr;}
+    .shot-grid{grid-template-columns:1fr;}
     .find-grid{grid-template-columns:1fr;}
     .stack{grid-template-columns:repeat(2,1fr);}
     .topbar nav{display:none;}
@@ -255,6 +278,7 @@
         <a href="#problem">Problem</a>
         <a href="#how">How it works</a>
         <a href="#decisions">Decisions</a>
+        <a href="#proof">Proof</a>
         <a href="#findings">Findings</a>
       </nav>
     </div>
@@ -466,6 +490,34 @@
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ===================== PROOF / SCREENSHOTS ===================== -->
+<section id="proof" class="proof">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">The real thing</p>
+      <h2>Not a mockup — the actual record.</h2>
+      <p>This is what a rep opens after a call is processed: the score with its full breakdown, the follow-up with timestamped evidence, and the pipeline that produced it all.</p>
+      <p class="redact-note">// client-identifying details redacted — everything else is untouched</p>
+    </div>
+
+    <div class="shot-grid reveal">
+      <a class="shot" href="screenshot-1-redacted.png" target="_blank" rel="noopener">
+        <img src="screenshot-1-redacted.png" alt="Meeting scorecard showing an engagement score of 81 with six weighted dimensions, each scored 0–5 with supporting evidence and a timestamp." loading="lazy" />
+        <figcaption><b>The scorecard.</b> Six dimensions, each scored 0–5 with evidence; the weights produce one deterministic total.</figcaption>
+      </a>
+      <a class="shot" href="screenshot-2-redacted.png" target="_blank" rel="noopener">
+        <img src="screenshot-2-redacted.png" alt="Follow-up panel with suggested next steps, talking-time split, feature interest, challenges, and a deal-intelligence summary." loading="lazy" />
+        <figcaption><b>The follow-up.</b> Suggested next moves, talk-time split, and deal intelligence — every signal traceable to a moment in the call.</figcaption>
+      </a>
+    </div>
+
+    <a class="shot reveal" href="screenshot-3-workflow.png" target="_blank" rel="noopener">
+      <img src="screenshot-3-workflow.png" alt="The end-to-end n8n automation graph: capture, transcribe, classify, derive, write to CRM, and notify." loading="lazy" />
+      <figcaption><b>The pipeline.</b> Capture → transcribe → classify → derive → write → notify, wired end to end in n8n.</figcaption>
+    </a>
   </div>
 </section>
 
